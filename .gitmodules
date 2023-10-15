@@ -1,0 +1,3 @@
+[submodule "iamsasf/themes/PaperMod"]
+	path = iamsasf/themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
