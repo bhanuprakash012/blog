@@ -2,3 +2,285 @@ losan ajdkf jls
 ake n
  a jj j 
 a j ks 
+
+PS C:\Users\nimma> cd blog
+PS C:\Users\nimma\blog> git add blog
+fatal: pathspec 'blog' did not match any files
+PS C:\Users\nimma\blog> git init
+Reinitialized existing Git repository in C:/Users/nimma/blog/.git/
+PS C:\Users\nimma\blog> git add blog.py
+PS C:\Users\nimma\blog> git commit -m "justatry"
+[main 08cb704] justatry
+ 1 file changed, 1 insertion(+)
+ create mode 100644 blog.py
+PS C:\Users\nimma\blog> git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   blog.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\nimma\blog> git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 281 bytes | 281.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/bhanuprakash012/blog.git
+   4583fc9..08cb704  main -> main
+PS C:\Users\nimma\blog> git pull origin main
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 695 bytes | 36.00 KiB/s, done.
+From https://github.com/bhanuprakash012/blog
+ * branch            main       -> FETCH_HEAD
+   08cb704..21dcff6  main       -> origin/main
+Updating 08cb704..21dcff6
+Fast-forward
+ test.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+PS C:\Users\nimma\blog> hugo --version
+hugo is the main command, used to build your Hugo site.
+
+Hugo is a Fast and Flexible Static Site Generator
+built with love by spf13 and friends in Go.
+
+Complete documentation is available at https://gohugo.io/.
+
+Usage:
+  hugo [flags]
+  hugo [command]
+
+Available Commands:
+  completion  Generate the autocompletion script for the specified shell
+  config      Print the site configuration
+  convert     Convert your content to different formats
+  deploy      Deploy your site to a Cloud provider.
+  env         Print Hugo version and environment info
+  gen         A collection of several useful generators.
+  help        Help about any command
+  import      Import your site from others.
+  list        Listing out various types of content
+  mod         Various Hugo Modules helpers.
+  new         Create new content for your site
+  server      A high performance webserver
+  version     Print Hugo version and environment info
+
+Flags:
+  -b, --baseURL string             hostname (and path) to the root, e.g. https://spf13.com/
+  -D, --buildDrafts                include content marked as draft
+  -E, --buildExpired               include expired content
+  -F, --buildFuture                include content with publishdate in the future
+      --cacheDir string            filesystem path to cache directory
+      --cleanDestinationDir        remove files from destination not found in static directories
+      --clock string               set the clock used by Hugo, e.g. --clock 2021-11-06T22:30:00.00+09:00
+      --config string              config file (default is hugo.yaml|json|toml)
+      --configDir string           config dir (default "config")
+  -c, --contentDir string          filesystem path to content directory
+      --debug                      debug output
+  -d, --destination string         filesystem path to write files to
+      --disableKinds strings       disable different kind of pages (home, RSS etc.)
+      --enableGitInfo              add Git revision, date, author, and CODEOWNERS info to the pages
+  -e, --environment string         build environment
+      --forceSyncStatic            copy all files when static is changed.
+      --gc                         enable to run some cleanup tasks (remove unused cache files) after the build
+  -h, --help                       help for hugo
+      --ignoreCache                ignores the cache directory
+      --ignoreVendorPaths string   ignores any _vendor for module paths matching the given Glob pattern
+  -l, --layoutDir string           filesystem path to layout directory
+      --logLevel string            log level (debug|info|warn|error)
+      --minify                     minify any supported output format (HTML, XML etc.)
+      --noBuildLock                don't create .hugo_build.lock file
+      --noChmod                    don't sync permission mode of files
+      --noTimes                    don't sync modification time of files
+      --panicOnWarning             panic on first WARNING log
+      --poll string                set this to a poll interval, e.g --poll 700ms, to use a poll based approach to watch for file system changes
+      --printI18nWarnings          print missing translations
+      --printMemoryUsage           print memory usage to screen at intervals
+      --printPathWarnings          print warnings on duplicate target paths etc.
+      --printUnusedTemplates       print warnings on unused templates.
+      --quiet                      build in quiet mode
+      --renderToMemory             render to memory (only useful for benchmark testing)
+  -s, --source string              filesystem path to read files relative from
+      --templateMetrics            display metrics about template executions
+      --templateMetricsHints       calculate some improvement hints when combined with --templateMetrics
+  -t, --theme strings              themes to use (located in /themes/THEMENAME/)
+      --themesDir string           filesystem path to themes directory
+      --trace file                 write trace to file (not useful in general)
+  -v, --verbose                    verbose output
+  -w, --watch                      watch filesystem for changes and recreate as needed
+
+Use "hugo [command] --help" for more information about a command.
+
+Error: command error: unknown flag: --version
+PS C:\Users\nimma\blog> hugo version
+hugo v0.119.0-b84644c008e0dc2c4b67bd69cccf87a41a03937e+extended windows/amd64 BuildDate=2023-09-24T15:20:17Z VendorInfo=gohugoio
+PS C:\Users\nimma\blog> hugo new site iamsasf
+Congratulations! Your new Hugo site was created in C:\Users\nimma\blog\iamsasf.
+
+Just a few more steps...
+
+1. Change the current directory to C:\Users\nimma\blog\iamsasf.
+2. Create or install a theme:
+   - Create a new theme with the command "hugo new theme <THEMENAME>"
+   - Install a theme from https://themes.gohugo.io/
+3. Edit hugo.toml, setting the "theme" property to the theme name.
+4. Create new content with the command "hugo new content <SECTIONNAME>\<FILENAME>.<FORMAT>".
+5. Start the embedded web server with the command "hugo server --buildDrafts".
+
+See documentation at https://gohugo.io/.
+PS C:\Users\nimma\blog> cd iamsasf
+PS C:\Users\nimma\blog\iamsasf> ls
+
+
+    Directory: C:\Users\nimma\blog\iamsasf
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        15-10-2023     18:25                archetypes
+d-----        15-10-2023     18:25                assets
+d-----        15-10-2023     18:25                content
+d-----        15-10-2023     18:25                data
+d-----        15-10-2023     18:25                i18n
+d-----        15-10-2023     18:25                layouts
+d-----        15-10-2023     18:25                static
+d-----        15-10-2023     18:25                themes
+-a----        15-10-2023     18:25             83 hugo.toml
+
+
+PS C:\Users\nimma\blog\iamsasf> rm .\hugo.toml
+PS C:\Users\nimma\blog\iamsasf> cd ..
+PS C:\Users\nimma\blog> rm .\iamsasf\
+
+Confirm
+The item at C:\Users\nimma\blog\iamsasf\ has children and the Recurse parameter was not specified. If you continue, all
+ children will be removed with the item. Are you sure you want to continue?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): A
+PS C:\Users\nimma\blog> hugo new site iamsasf --format=yml
+Congratulations! Your new Hugo site was created in C:\Users\nimma\blog\iamsasf.
+
+Just a few more steps...
+
+1. Change the current directory to C:\Users\nimma\blog\iamsasf.
+2. Create or install a theme:
+   - Create a new theme with the command "hugo new theme <THEMENAME>"
+   - Install a theme from https://themes.gohugo.io/
+3. Edit hugo.yml, setting the "theme" property to the theme name.
+4. Create new content with the command "hugo new content <SECTIONNAME>\<FILENAME>.<FORMAT>".
+5. Start the embedded web server with the command "hugo server --buildDrafts".
+
+See documentation at https://gohugo.io/.
+PS C:\Users\nimma\blog> cd .\iamsasf\
+PS C:\Users\nimma\blog\iamsasf> git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+Cloning into 'C:/Users/nimma/blog/iamsasf/themes/PaperMod'...
+remote: Enumerating objects: 131, done.
+remote: Counting objects: 100% (131/131), done.
+remote: Compressing objects: 100% (110/110), done.
+Receiving objects:  89% (117/131)sed 53 (delta 15), pack-reused 0
+Receiving objects: 100% (131/131), 260.13 KiB | 1.29 MiB/s, done.
+Resolving deltas: 100% (30/30), done.
+warning: in the working copy of '.gitmodules', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\nimma\blog\iamsasf> hugo server
+Watching for changes in C:\Users\nimma\blog\iamsasf\{archetypes,assets,content,data,i18n,layouts,static,themes}
+Watching for config changes in C:\Users\nimma\blog\iamsasf\hugo.yml
+Start building sites …
+hugo v0.119.0-b84644c008e0dc2c4b67bd69cccf87a41a03937e+extended windows/amd64 BuildDate=2023-09-24T15:20:17Z VendorInfo=gohugoio
+
+
+                   | EN
+-------------------+-----
+  Pages            |  7
+  Paginator pages  |  0
+  Non-page files   |  0
+  Static files     |  0
+  Processed images |  0
+  Aliases          |  1
+  Sitemaps         |  1
+  Cleaned          |  0
+
+Built in 115 ms
+Environment: "development"
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+PS C:\Users\nimma\blog\iamsasf> git add .
+warning: in the working copy of 'iamsasf/archetypes/default.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'iamsasf/hugo.yml', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\nimma\blog\iamsasf> git commit -m "website"
+[main 6a75487] website
+ 5 files changed, 13 insertions(+)
+ create mode 100644 .gitmodules
+ create mode 100644 iamsasf/.hugo_build.lock
+ create mode 100644 iamsasf/archetypes/default.md
+ create mode 100644 iamsasf/hugo.yml
+ create mode 160000 iamsasf/themes/PaperMod
+PS C:\Users\nimma\blog\iamsasf> git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\nimma\blog\iamsasf> git add .
+warning: in the working copy of 'iamsasf/hugo.yml', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\nimma\blog\iamsasf> git commit -m "website"
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ../blog.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\nimma\blog\iamsasf> git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\nimma\blog\iamsasf> git push origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 917 bytes | 305.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/bhanuprakash012/blog.git
+   21dcff6..6a75487  main -> main
+PS C:\Users\nimma\blog\iamsasf> gh repo create iamsaf --public --push --source=. --remote=origin
+current directory is not a git repository. Run `git init` to initialize it
+PS C:\Users\nimma\blog\iamsasf> git init
+Initialized empty Git repository in C:/Users/nimma/blog/iamsasf/.git/
+PS C:\Users\nimma\blog\iamsasf> gh repo create iamsaf --public --push --source=. --remote=origin
+`--push` enabled but no commits found in C:\Users\nimma\blog\iamsasf
+PS C:\Users\nimma\blog\iamsasf> git add .
+warning: in the working copy of 'archetypes/default.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'hugo.yml', LF will be replaced by CRLF the next time Git touches it
+warning: adding embedded git repository: themes/PaperMod
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> themes/PaperMod
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached themes/PaperMod
+hint:
+hint: See "git help submodule" for more information.
+PS C:\Users\nimma\blog\iamsasf> git rm --cached themes/PaperMod
+rm 'themes/PaperMod'
+PS C:\Users\nimma\blog\iamsasf>
