@@ -2,3 +2,46 @@ baseURL: https://<bhanuprakash012>.github.io/
 languageCode: en-us
 title: My Hugo Site
 theme: PaperMod
+author: "Bhanu prakash"
+
+
+mainSections:
+  - blog
+  - archives
+
+
+menu:
+  main:
+    - name: Home
+      pageref: /
+      weight: 10
+    - name: Blogs
+      pageref: /blog
+      weight: 20
+    - name: Archives
+      url: /archives
+      weight: 30
+
+params:
+  profileMode:
+    enabled: true
+    title: "I'm Retarded" # optional default will be site title
+    subtitle: "Test Website by Slashdot."
+    author: "hehe"
+    imageUrl: "/images/profile.jpg" # optional
+    imageTitle: "Profile Image" # optional
+    imageWidth: 400 # custom size
+    imageHeight: 300 # custom size
+    buttons:
+      - name: Blogs
+        url: "/blog"
+
+  socialIcons:
+    - name: "Linkedin"
+      url: "https://slashdot-iiserk.github.io"
+    - name: "YouTube"
+      url: "https://www.youtube.com/@piyushkrsingh"
+    - name: "Github"
+      url: "https://github.com/iamPiyushKrSingh"
+    - name: "Instagram"
+      url: "<>"
